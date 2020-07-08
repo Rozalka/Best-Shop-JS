@@ -1,0 +1,124 @@
+.top-menu {
+    height: 70px;
+    box-shadow: 0 3px 6px $color-primary-shadow;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.top-menu-items {
+    position: absolute;
+    left: 0;
+    top: 95px;
+    flex-direction: column;
+    background-color: $color-white;
+    width: 100%;
+    padding-bottom: 20px;
+    display: none;
+    box-shadow: 0 3px 6px $color-primary-shadow;
+
+    li {
+        padding: 0;
+
+        .nav-link {
+            padding: 14px 20px;
+            display: block;
+            border-bottom: none;
+            font-family: $font-paragraphs;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 3.28px;
+            color: $color-grey;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+}
+  
+.menu-btn {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    top: -10000px;
+    left: -10000px;
+
+    &:checked {
+
+        ~.top-menu-items {
+            display: flex;
+        }
+
+        ~.hamburger-menu {
+
+            span {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(2px, 5px);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(2px, -5px);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.hamburger-menu {
+    display: block;
+
+    span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin-bottom: 3px;
+        background: $color-primary;
+        transition: 0.3s all ease-in-out;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 790px) {
+    .top-menu-items {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        padding-bottom: 0;
+
+        li {
+            padding: 0 26px;
+
+            .nav-link {
+                padding: 27px 18px;
+                border-bottom: 4px solid transparent;
+
+                &:hover {
+                    border-color: $color-primary;
+                }
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}

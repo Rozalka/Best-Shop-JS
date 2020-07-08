@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $font-headers;
+    font-size: 3.0625rem;
+    font-weight: 400;
+    color: $color-black;
+}
+
+h2 {
+    font-family: $font-headers;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: $color-black;
+}
+
+p {
+    font-family: $font-paragraphs;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-black;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.logo {
+    font-family: $font-headers;
+    font-size: 2rem;
+    font-weight: 300;
+    color: $color-primary;
+}
+
+@media (min-width: 1352px) {
+    .container {
+        width: 1352px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,214 @@
+.calc {
+    padding: 30px 15px;
+    background-color: $color-light-grey;
+
+
+    h2 {
+        text-align: center;
+    }
+
+    .calc-columns {
+        max-width: 865px;
+        margin: 50px auto 0;
+        display: block;
+       
+        .calc-form {
+             width: 100%;
+             margin-right: 0;
+            
+            .calc-input input,
+            .calc-select .select-input {
+                color: $color-grey;
+                width: 100%;
+                border-radius: 6px;
+                border: 1px solid $color-primary;
+                padding: 11px 20px;
+                line-height: 1em;
+                font-family: $font-paragraphs;
+                font-size: 0.8125rem;
+                box-shadow: 0px 3px 6px $color-primary-shadow;
+                margin-bottom: 20px;
+                background-color: $color-white;
+            }
+
+            .calc-input {
+                input {
+                    &::placeholder {
+                        color: $color-grey;
+                    }
+                }
+            }
+
+            .calc-select {
+                position: relative;
+
+                .select-input {
+                    position: relative;
+                    height: 40px;
+                    vertical-align: middle;
+                    padding: 13px 20px;
+                    cursor: pointer;
+
+                    &::after {
+                        content: "";
+                        background-image: url("../assets/Arrow.svg");
+                        width: 22px;
+                        height: 22px;
+                        display: block;
+                        position: absolute;
+                        right: 14px;
+                        top: 9px;
+                    }
+                }
+
+                .select-dropdown {
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                    background-color: white;
+                    width: 100%;
+                    border-radius: 6px;
+                    border: 1px solid $color-redish;
+                    overflow: hidden;
+
+                    li {
+                        font-size: 13px;
+                        padding: 10px 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $color-light-grey;
+                        }
+                    }
+                }
+
+                &.open {
+                    .select-input ::after {
+                        transform: rotate(180deg);
+                    }
+
+                    .select-dropdown {
+                        display: block;
+                    }
+                }
+
+            }
+
+            .form-checkbox {
+                position: relative;
+                display: block;
+
+                .consent-text {
+                    padding-top: 4px;
+                }
+
+
+                #accounting,
+                #terminal {
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                }
+
+                p {
+                    margin-left: 35px;
+                    font-size: 0.75rem;
+                    color: $color-grey;
+                    font-family: $font-paragraphs;
+                    padding-bottom: 20px;
+                }
+
+                span {
+                    position: absolute;
+                    height: 24px;
+                    width: 24px;
+                    border: 1px solid #D1D1D1;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                input:checked+span {
+                    background: url("../assets/Checkmark.svg") no-repeat;
+                    background-position: center;
+                }
+
+            }
+
+        }
+
+      
+        .calc-summary {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 30px;
+            flex-direction: column;
+
+            .summary-total,
+            .list-item {
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+                border-radius: 6px;
+                justify-content: space-between;
+                align-items: center;
+                color: $color-white;
+                font-size: 0.875rem;
+                display: none;
+
+                &.open {
+                    display: flex;
+                }
+            }
+            
+            .summary-total {
+                width: 50%;
+                align-self: flex-end;
+                margin-top: 22px;
+                padding: 8px 20px;
+                background-color: $color-primary;
+
+                .total-price {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                }
+            }
+
+            .list-item {
+                padding: 6px 20px;
+                background-color: $color-green;
+                margin-bottom: 8px;
+
+                .item {
+                    .item-price {
+                        font-weight: 700;
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media(min-width: 1024px) {
+    .calc {
+        padding: 80px 0;
+
+        .calc-columns {
+            display: flex;
+
+            .calc-form {
+                width: 50%;
+                margin-right: 20px;
+            }
+
+            .calc-summary {
+                width: 50%;
+                margin-left: 20px;
+                display: flex;
+            }
+        }
+
+        
+    }
+}

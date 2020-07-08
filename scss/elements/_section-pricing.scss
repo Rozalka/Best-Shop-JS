@@ -1,0 +1,182 @@
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 53px auto;
+
+    .pricing-boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.pricing-single {
+    max-width: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    margin: 0 30px 54px;
+    padding: 25px 11px 0 11px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .pricing-info {
+        text-align: center;
+        width: 50%;
+        margin: 0;
+
+        .pricing-type {
+            font-family: $font-headers;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #13253B;
+        }
+
+        .pricing-cost {
+            font-family: $font-paragraphs;
+            font-size: 2.875rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        .offer-time {
+            font-family: $font-headers;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #13253B;
+        }
+    }
+
+    .pricing-details {
+        margin-bottom: 0;
+        text-align: left;
+        width: 50%;
+
+        li {
+            font-family: $font-paragraphs;
+            font-size: 14px;
+            line-height: 41px;
+        }
+
+        .checked::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            background: url("../assets/Ckechmark-1.svg");
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .not-checked::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            margin-right: 10px;
+            background: url("../assets/Close.svg");
+        }
+    }
+
+    .small-btn {
+        font-size: 0.8125rem;
+        color: $color-white;
+        font-family: $font-paragraphs;
+        font-weight: 700;
+        border-radius: $radius-small-btn;
+        padding: 16px 57px;
+        position: relative;
+        bottom: -20px;
+    }
+}
+
+.pricing-basic {
+    border: 1px solid $color-redish;
+
+    .pricing-cost {
+        color: $color-redish;
+        margin-bottom: 69px;
+    }
+
+    .small-btn {
+        background: $color-redish;
+    }
+}
+
+.pricing-professional {
+    border: 1px solid #07ACE6;
+    box-shadow: 5px 10px 27px $color-primary-shadow;
+    max-width: 400px;
+    height: auto;
+
+    .pricing-cost {
+        color: $color-primary;
+    }
+
+    .small-btn {
+        background: $color-primary;
+        bottom: -25px;
+        padding: 16px 57px;
+    }
+}
+
+.pricing-premium {
+    border: 1px solid $color-green;
+
+    .pricing-cost {
+        color: $color-green;
+    }
+
+    .small-btn {
+        background: $color-green;
+    }
+}
+
+@media (min-width: 1350px) {
+    .pricing-container {
+        margin: 100px auto;
+
+        .pricing-boxes {
+            flex-direction: row;
+        }
+    }
+
+    .pricing-single {
+        width: 372px;
+        margin: 0 30px;
+        flex-direction: column;
+        text-align: center;
+
+        .pricing-details {
+            text-align: center;
+        }
+
+        .pricing-info {
+            margin-top: 34px;
+            margin-bottom: 60px;
+        }
+
+        .small-btn {
+            bottom: -25px;
+        }
+    }
+
+    .pricing-professional {
+        width: 405px;
+        height: 500px;
+
+        .small-btn {
+            bottom: -45px;
+            padding: 16px 65px;
+        }
+    }
+}

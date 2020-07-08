@@ -1,0 +1,223 @@
+.benefits {
+    background: $color-light-grey;
+    padding: 42px 0;
+
+    .benefits-container {
+        padding: 0 30px;
+    }
+}
+
+.benefit {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: $color-white;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-bottom: 27px;
+
+    .benefit-info {
+        margin: 26px;
+        max-width: 100%;
+
+        p {
+            line-height: 22px;
+            margin-top: 18px;
+        }
+    }
+
+    .benefit-pic {
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .pic1 {
+        margin-right: 117px;
+        margin-bottom: 38px;
+        margin: 42px 0 0;
+    }
+
+    .pic1::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 90px;
+        height: 90px;
+        top: -25px;
+        right: -10px;
+        border-radius: 40px;
+        transform: rotate(45deg);
+        background-color: $color-redish;
+    }
+
+    .pic1 img {
+        height: auto;
+        width: 192px;
+    }
+
+    .pic2 {
+        &::before {
+            content: "";
+            background: $color-primary;
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            width: 132px;
+            height: 132px;
+            top: 12px;
+            left: 0;
+        }
+
+        img {
+            height: auto;
+            width: 175px;
+            margin-top: 19px;
+        }
+    }
+}
+
+.benefit3 {
+    display: flex;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+
+    .benefit3a {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .benefit-pic3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-green;
+        margin-bottom: 37px;
+        width: 100%;
+        margin-left: 0;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+
+        img {
+            width: 295px;
+            height: auto;
+            margin-top: 55px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefits {
+        padding: 100px 0;
+
+        .benefits-container {
+            padding: 0 100px;
+        }
+    }
+
+    .benefit {
+        margin-bottom: 37px;
+        align-items: flex-end;
+        flex-direction: row;
+
+        .benefit-info {
+            margin: 90px 35px;
+            max-width: 415px;
+            flex-direction: column;
+
+            p {
+                margin-top: 30px;
+            }
+
+            &::after {
+                content: "";
+                width: 328px;
+                height: 4px;
+                display: block;
+                margin-top: 50px;
+                background-color: $color-green;
+            }
+        }
+
+        .benefit1 {
+            &::after {
+                background-color: $color-redish;
+            }
+        }
+
+        .pic1 {
+            margin-right: 117px;
+            margin-bottom: 38px;
+
+            &::before {
+                width: 180px;
+                height: 180px;
+                top: -40px;
+                right: 0;
+            }
+
+            img {
+                width: 386px;
+            }
+        }
+
+        .benefit2 {
+            &::after {
+                background-color: $color-primary;
+            }
+        }
+
+        .pic2 {
+            &::before {
+                width: 320px;
+                height: 320px;
+                top: -20px;
+                top: 12px;
+            }
+
+            img {
+                width: 426px;
+                height: auto;
+            }
+        }
+    }
+
+    .benefit:nth-of-type(2) {
+        flex-direction: row-reverse;
+        padding: 0 20px 0 70px;
+    }
+
+    .benefit3 {
+        flex-direction: row;
+        margin-bottom: 0;
+
+        .benefit3a {
+            width: 620px;
+            height: 370px;
+
+            .benefit-info {
+                width: 415px;
+                margin: 70px 35px;
+            }
+        }
+
+        .benefit-pic3 {
+            width: 440px;
+            height: 370px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            background: $color-green;
+            border: none;
+            margin-bottom: 0;
+            margin-left: 60px;
+            border-radius: 0;
+        }
+    }
+}
