@@ -1,6 +1,7 @@
 .calc {
     padding: 30px 15px;
     background-color: $color-light-grey;
+    font-family: $font-paragraphs;
 
 
     h2 {
@@ -83,7 +84,7 @@
                 }
 
                 &.open {
-                    .select-input ::after {
+                    .select-input::after {
                         transform: rotate(180deg);
                     }
 
@@ -139,10 +140,12 @@
 
       
         .calc-summary {
+            height: 31px;
             width: 100%;
             margin-left: 0;
             margin-top: 30px;
             flex-direction: column;
+            margin-bottom: 180px;
 
             .summary-total,
             .list-item {
@@ -156,13 +159,15 @@
 
                 &.open {
                     display: flex;
+            
                 }
             }
             
             .summary-total {
                 width: 50%;
                 align-self: flex-end;
-                margin-top: 22px;
+        
+                margin: 22px 0 0 auto;
                 padding: 8px 20px;
                 background-color: $color-primary;
 
@@ -203,9 +208,13 @@
             }
 
             .calc-summary {
+                margin-top: 0;
                 width: 50%;
                 margin-left: 20px;
                 display: flex;
+            }
+            .summary-total {
+                margin-top: 22px;
             }
         }
 

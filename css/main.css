@@ -1000,6 +1000,7 @@ p {
 .calc {
   padding: 30px 15px;
   background-color: #F7F7F7;
+  font-family: "Open Sans", sans-serif;
 }
 .calc h2 {
   text-align: center;
@@ -1077,7 +1078,7 @@ p {
 .calc .calc-columns .calc-form .calc-select .select-dropdown li:hover {
   background-color: #F7F7F7;
 }
-.calc .calc-columns .calc-form .calc-select.open .select-input ::after {
+.calc .calc-columns .calc-form .calc-select.open .select-input::after {
   transform: rotate(180deg);
 }
 .calc .calc-columns .calc-form .calc-select.open .select-dropdown {
@@ -1117,10 +1118,12 @@ p {
   background-position: center;
 }
 .calc .calc-columns .calc-summary {
+  height: 31px;
   width: 100%;
   margin-left: 0;
   margin-top: 30px;
   flex-direction: column;
+  margin-bottom: 180px;
 }
 .calc .calc-columns .calc-summary .summary-total,
 .calc .calc-columns .calc-summary .list-item {
@@ -1139,7 +1142,7 @@ p {
 .calc .calc-columns .calc-summary .summary-total {
   width: 50%;
   align-self: flex-end;
-  margin-top: 22px;
+  margin: 22px 0 0 auto;
   padding: 8px 20px;
   background-color: #08A6E4;
 }
@@ -1169,9 +1172,13 @@ p {
     margin-right: 20px;
   }
   .calc .calc-columns .calc-summary {
+    margin-top: 0;
     width: 50%;
     margin-left: 20px;
     display: flex;
+  }
+  .calc .calc-columns .summary-total {
+    margin-top: 22px;
   }
 }
 .contact {
