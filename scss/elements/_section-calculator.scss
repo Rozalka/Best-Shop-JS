@@ -92,7 +92,6 @@
                         display: block;
                     }
                 }
-
             }
 
             .form-checkbox {
@@ -102,7 +101,6 @@
                 .consent-text {
                     padding-top: 4px;
                 }
-
 
                 #accounting,
                 #terminal {
@@ -133,19 +131,16 @@
                     background: url("../assets/Checkmark.svg") no-repeat;
                     background-position: center;
                 }
-
             }
-
         }
-
-      
+ 
         .calc-summary {
             height: 31px;
             width: 100%;
             margin-left: 0;
             margin-top: 30px;
             flex-direction: column;
-            margin-bottom: 180px;
+            margin-bottom: 200px;
 
             .summary-total,
             .list-item {
@@ -178,6 +173,7 @@
             }
 
             .list-item {
+                height: 31px;
                 padding: 6px 20px;
                 background-color: $color-green;
                 margin-bottom: 8px;
@@ -190,9 +186,7 @@
                 }
             }
         }
-
     }
-
 }
 
 @media(min-width: 1024px) {
@@ -208,16 +202,13 @@
             }
 
             .calc-summary {
-                margin-top: 0;
                 width: 50%;
-                margin-left: 20px;
+                margin: 0 0 109px 20px;
                 display: flex;
             }
             .summary-total {
                 margin-top: 22px;
             }
-        }
-
-        
+        }    
     }
 }

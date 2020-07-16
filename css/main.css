@@ -1123,7 +1123,7 @@ p {
   margin-left: 0;
   margin-top: 30px;
   flex-direction: column;
-  margin-bottom: 180px;
+  margin-bottom: 200px;
 }
 .calc .calc-columns .calc-summary .summary-total,
 .calc .calc-columns .calc-summary .list-item {
@@ -1151,6 +1151,7 @@ p {
   font-weight: 700;
 }
 .calc .calc-columns .calc-summary .list-item {
+  height: 31px;
   padding: 6px 20px;
   background-color: #55DFB4;
   margin-bottom: 8px;
@@ -1172,9 +1173,8 @@ p {
     margin-right: 20px;
   }
   .calc .calc-columns .calc-summary {
-    margin-top: 0;
     width: 50%;
-    margin-left: 20px;
+    margin: 0 0 109px 20px;
     display: flex;
   }
   .calc .calc-columns .summary-total {
